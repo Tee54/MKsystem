@@ -1,0 +1,18 @@
+Update the makefile
+    use xorriso for the iso 
+    ask for architecture
+    sanity checks for .bin and .iso 
+
+linker.ld 
+    learn how to do better
+
+Grub
+    the multiboot2 header its actually okay
+    check the failed an assigment error 
+
+Stack
+    learn basic math for computers bytes etc
+    implement bootstrap stack later 
+    stack_init need the ram info
+
+

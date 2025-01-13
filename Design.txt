@@ -1,0 +1,50 @@
+Design
+-IPC = QNX IPC
+-Shared memory
+-Security = sel4
+-Posix-like api
+-Stack
+-SysCalls api
+
+Servers
+-UNIX-like
+-FILESYSTEM
+-BASH SHELL
+
+LICENSE
+-GPL for kernel
+-BSD for servers
+
+LEARN-GOALS
+-Learn x86_64 assembly
+-Read books 
+
+SHORT-TERM-GOALS
+-Prepare GRUB2
+-Write Multiboot2
+-Write GTD
+-Write Boot.c
+-Write a Display driver VGA
+-Write a Hello World
+
+
+LONG-TERM-GOALS
+-Write IPC
+-Thread support
+-api lib
+-system calls
+
+TOOLS
+-C
+-GRUB
+-x86_64
+-QEMU
+
+WHAT-MOST-HAVE
+Memory allocation #paging
+cpu schuduling #threads
+ipc #message-passing shared-memory
+basic drivers #keyboard and display
+debug #system most not break
+
+
