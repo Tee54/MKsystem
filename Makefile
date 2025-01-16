@@ -14,7 +14,7 @@ LDFLAGS = -T linker.ld -n -ffreestanding -O2 -nostdlib
 #files
 ARCH = src/arch/x86
 SRC = src/kern
-OBJ = boot.o multiboot2.o kern.o
+OBJ = boot.o multiboot2.o kern.o memory.o paging.o
 
 #rules
 all: kernel.bin
@@ -31,6 +31,15 @@ multiboot2.o: $(ARCH)/multiboot2.S
 
 kern.o: $(SRC)/main.c
 	$(GCC) -c $(SRC)/kern.c -o kern.o $(CFLAGS)
+
+memory.o: $(SRC)/memory.c
+	$(GCC) -c memory.c -o memory.o $(CFLAGS)
+	
+paging.o: $(ARCH)/kern/memory.s
+	$(AS) $(ARCH)/kern/memory.s -o paging.o
+
+stack.o: $(SRC)/stack.c
+	$(GCC) -c $(SRC)/stack.c -o stack.o
 
 clean:
 	rm -f $(OBJ) kernel.bin

@@ -4,13 +4,13 @@
 #include <stdint.h>
 
 //INCLUDE ALL
-//#include "include/drivers/mmu/mmu.h"
 //#include "include/kern/memory.h"
 //#include "include/kern/stack.h"
 //#include "include/machine/interrupts.h"
 //#include "include/machine/scheduler.h"
 //#include "include/machine/io.h"
 //#include "include/drivers/timer/timer.h"
+//#include "include/drivers/mmu/mmu.h"
 //#include "include/drivers/emb/framebuffer.h"
 //#include "include/drivers/emb/keyboard.h"
 //

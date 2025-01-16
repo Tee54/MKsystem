@@ -3,31 +3,31 @@
 .global _start
 .type _start, @function
 
+.section .bss
+.align 16
+stack_top:
+.skip 16384 #16 Kib
+stack_bottom:
+
 .section .text
 _start:
-    #HARDWARE CHECK
+    #SET LITTLE STACK
+    mov $stack_top, %rbp
 
-    #INIT PAGING: CALL THE MMU
+    #HARDWARE CHECK (LATER)
+    #INIT PAGING
+    push %rbp 
+    mov %rsp, rbp
+    call init_paging
+
+    pop %rbp
 
     #INIT GTD
 
     #INIT LONG MODE
-
-    call init_bootstrap_stack
 
     #CALL FOR THE CPU BASIC INFORMATION: MEMORY
 
     call kernel_main
 
     hlt
-
-OOPS:
-    #Oops!
-    movw $0x024f, 0xb8000
-    movw $0x026f, 
-    movw $0x0270,
-    movw $0x0273,
-    movw $0x0221,
-
-    hlt
-    ret

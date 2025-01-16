@@ -1,18 +1,40 @@
 Update the makefile
-    use xorriso for the iso 
     ask for architecture
-    sanity checks for .bin and .iso 
 
 linker.ld 
     learn how to do better
 
 Grub
     the multiboot2 header its actually okay
-    check the failed an assigment error 
+    add framebuffer and memory info in the multiboot2 header 
+
+Memory
+    implement simple paging method (for now)
+    add the GTD
+    then the stack
 
 Stack
     learn basic math for computers bytes etc
     implement bootstrap stack later 
     stack_init need the ram info
 
+IPC 
+    implement message-passing (sync)
+    memory-sharing for later
+
+IO 
+    learn about I/O devices
+    implement 
+
+Interrupt 
+    learn about it 
+
+Drivers
+    the timer first
+    then the mmu 
+    later the embedded ones
+
+Syscalls
+    learn first
+    maybe a lib
 
